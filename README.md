@@ -1,59 +1,103 @@
-# TesteNovo
+# ClinicaAbertamente
 
-This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.0.6.
+Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli), versão 19.0.6.
 
-## Development server
+## Servidor de desenvolvimento
 
-To start a local development server, run:
+Para iniciar o servidor de desenvolvimento local, execute:
 
 ```bash
 ng serve
 ```
 
-Once the server is running, open your browser and navigate to `http://localhost:4200/`. The application will automatically reload whenever you modify any of the source files.
+Depois que o servidor estiver ativo, abra seu navegador e acesse `http://localhost:4200/`. A aplicação será recarregada automaticamente sempre que você modificar os arquivos-fonte.
 
-## Code scaffolding
+## Geração de código (scaffolding)
 
-Angular CLI includes powerful code scaffolding tools. To generate a new component, run:
+O Angular CLI possui ferramentas poderosas para gerar código automaticamente. Para criar um novo componente, execute:
 
 ```bash
-ng generate component component-name
+ng generate component nome-do-componente
 ```
 
-For a complete list of available schematics (such as `components`, `directives`, or `pipes`), run:
+Para ver a lista completa de geradores disponíveis (como componentes, diretivas ou pipes), execute:
 
 ```bash
 ng generate --help
 ```
 
-## Building
+## Build do projeto
 
-To build the project run:
+Para compilar o projeto, execute:
 
 ```bash
 ng build
 ```
 
-This will compile your project and store the build artifacts in the `dist/` directory. By default, the production build optimizes your application for performance and speed.
+Esse comando irá compilar o projeto e salvar os arquivos finais na pasta `dist/`. Por padrão, a build de produção já aplica otimizações de desempenho.
 
-## Running unit tests
+## Executar testes unitários
 
-To execute unit tests with the [Karma](https://karma-runner.github.io) test runner, use the following command:
+Para rodar os testes unitários com o [Karma](https://karma-runner.github.io), utilize:
 
 ```bash
 ng test
 ```
 
-## Running end-to-end tests
+## Executar testes de ponta a ponta (e2e)
 
-For end-to-end (e2e) testing, run:
+Para testes de ponta a ponta, use:
 
 ```bash
 ng e2e
 ```
 
-Angular CLI does not come with an end-to-end testing framework by default. You can choose one that suits your needs.
+O Angular CLI não traz uma ferramenta de e2e por padrão, então você pode escolher a que melhor se adapta ao seu projeto.
 
-## Additional Resources
+## Deploy no GitHub Pages
 
-For more information on using the Angular CLI, including detailed command references, visit the [Angular CLI Overview and Command Reference](https://angular.dev/tools/cli) page.
+Para publicar este projeto no GitHub Pages, siga os passos abaixo:
+
+### 1. Instale a biblioteca de deploy
+
+Você precisa instalar a biblioteca `angular-cli-ghpages` para facilitar o processo de publicação:
+
+```bash
+ng add angular-cli-ghpages
+```
+
+### 2. Gere a build para produção com caminho base ajustado
+
+Execute o seguinte comando para compilar a aplicação para produção e definir o caminho base correto para o GitHub Pages:
+
+```bash
+ng build --configuration production --base-href=/clinica-abertamente/
+```
+
+> Como alternativa, você pode simplificar esse comando configurando o base path no `angular.json`. Para isso, adicione o seguinte dentro da seção `"production"` das configurações de build:
+
+```json
+"baseHref": "/clinica-abertamente/"
+```
+
+Depois disso, o comando de build pode ser simplificado para:
+
+```bash
+ng build
+```
+
+### 3. Publique os arquivos gerados
+
+Após a build, execute o comando abaixo para publicar os arquivos da pasta `browser` na branch `gh-pages`:
+
+```bash
+npx angular-cli-ghpages --dir=dist/clinica-abertamente/browser
+```
+
+Ao finalizar, sua aplicação estará disponível em:
+
+```
+https://<seu-nome-de-usuario>.github.io/clinica-abertamente/
+```
+
+Não esqueça de substituir `<seu-nome-de-usuario>` pelo seu usuário do GitHub.

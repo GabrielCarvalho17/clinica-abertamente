@@ -16,6 +16,6 @@ export class HeroComponent {
     'Estamos aqui para ouvir você, oferecer apoio e ajudar a construir o equilíbrio emocional que transforma vidas.';
   buttonPrimary: string = 'Vamos conversar';
   buttonSecondary: string = 'Nossa metodologia';
-  imageSrc: string = '/images/components/sections/hero/hero.webp';
+  imageSrc: string = 'images/components/sections/hero/hero.webp';
   imageAlt: string = 'Imagem ilustrativa';
 }
