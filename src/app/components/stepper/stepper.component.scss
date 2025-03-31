@@ -44,7 +44,7 @@
       height: 0;
       top: 50%;
       left: 50%;
-      background-color: #ff8055;
+      background-color: #f58362;
       border-radius: 50%;
       transform: translate(-50%, -50%) scale(0);
       transition:
@@ -101,7 +101,7 @@
     padding: 0;
     font-size: 18px;
     font-weight: 430;
-    color: #076c68;
+    color: rgba(7, 108, 104, 0.77);
     @media (max-width: 452px) {
       font-size: 16px;
     }

@@ -1,0 +1,61 @@
+:host {
+  display: block;
+  width: 100%;
+}
+
+.accordion {
+  height: fit-content;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  &__button {
+    all: unset;
+    cursor: pointer;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
+  }
+
+  &__title {
+    padding: 0;
+    margin: 0;
+    font-size: 18px;
+    color: #076c68;
+  }
+  &__icon {
+    transition: transform 0.3s ease;
+    &.rotated {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    color: #076c68;
+    font-weight: 500;
+    font-size: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease;
+    &--open {
+      height: 100%;
+    }
+  }
+  &__item {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: start;
+  }
+}

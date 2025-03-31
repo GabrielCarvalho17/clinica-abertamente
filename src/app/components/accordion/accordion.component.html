@@ -1,0 +1,11 @@
+<div class="accordion">
+  <button class="accordion__button" (click)="toggleAccordion()">
+    <h2 class="accordion__title">{{ title }}</h2>
+    <img class="accordion__icon" src="images/widgets/arrow.svg" alt="" />
+  </button>
+  <ul class="accordion__list" [class.accordion__list--open]="isOpen">
+    <li *ngFor="let item of items" class="accordion__item">
+      {{ item }}
+    </li>
+  </ul>
+</div>

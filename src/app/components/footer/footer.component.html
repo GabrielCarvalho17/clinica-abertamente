@@ -1,9 +1,9 @@
 <footer class="footer">
-  <div class="footer__section footer__section--emphasis">
+  <div class="footer__section">
     <div class="footer__container">
       <div class="footer__top">
         <h2 class="footer__title">Fique por dentro de novidades</h2>
-        <p class="footer__text">
+        <p class="footer__text footer__text--info">
           Inscreva-se e seja o primeiro a saber sobre as novidades, promoções e
           muito mais!
         </p>
@@ -22,9 +22,9 @@
       <div class="footer__body">
         <div class="footer__column">
           <h2 class="footer__title">Clínica Abertamente</h2>
-          <p class="footer__text">
-            Oferecemos apoio emocional com escuta empática, cuidado profissional
-            e acolhimento para cada momento da sua jornada pessoal.
+          <p class="footer__text footer__text--info">
+            Oferecemos apoio emocional com dedicação, profissionalismo e
+            acolhimento ao longo de toda a sua jornada pessoal.
           </p>
           <div class="footer__row">
             <div class="footer__circle"><!--Apenas para teste--></div>
@@ -36,56 +36,94 @@
         </div>
         <div class="footer__column">
           <h2 class="footer__title">Pagamento</h2>
-          <div class="footer__row">
+          <div class="footer__grid">
             <img src="images/payments/amex.svg" alt="" />
             <img src="images/payments/dinners.svg" alt="" />
-          </div>
-
-          <div class="footer__row">
             <img src="images/payments/elo.svg" alt="" />
             <img src="images/payments/hipercard.svg" alt="" />
-          </div>
-
-          <div class="footer__row">
             <img src="images/payments/mastercard.svg" alt="" />
             <img src="images/payments/mercado-pago.svg" alt="" />
+            <img src="images/payments/pix.svg" alt="" />
           </div>
-
-          <img src="images/payments/pix.svg" alt="" />
         </div>
-        <div class="footer__column">
+        <app-accordion
+          *ngIf="isMobile"
+          [title]="'Navegação'"
+          [items]="[
+            'Início',
+            'Serviços',
+            'Espaço',
+            'Equipe',
+            'Metodologia',
+            'Localização',
+            'Nosso blog',
+          ]"
+        >
+        </app-accordion>
+        <app-accordion
+          *ngIf="isMobile"
+          [title]="'Contato'"
+          [items]="[
+            '(43) 3337-7793',
+            'oi@clinicaabertamente.com.br',
+            'R. Belo Horizonte, 1558 - Centro, Londrina - PR, 86020-061',
+            'Segunda à Sexta das 8:00 às 21:00',
+          ]"
+        >
+        </app-accordion>
+        <div *ngIf="!isMobile" class="footer__column">
           <h2 class="footer__title">Navegação</h2>
-          <p class="footer__text">Início</p>
-          <p class="footer__text">Serviços</p>
-          <p class="footer__text">Espaço</p>
-          <p class="footer__text">Equipe</p>
-          <p class="footer__text">Metodologia</p>
-          <p class="footer__text">Localização</p>
-          <p class="footer__text">Nosso blog</p>
+          <ul class="footer__list">
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Início</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Serviços</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Espaço</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Equipe</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Metodologia</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Localização</a>
+            </li>
+            <li class="footer__list-item">
+              <a class="footer__link" href="">Nosso blog</a>
+            </li>
+          </ul>
         </div>
-        <div class="footer__column">
+        <div *ngIf="!isMobile" class="footer__column">
           <h2 class="footer__title">Contato</h2>
-          <p class="footer__text">(43) 3337-7793</p>
-          <p class="footer__text">oi{{ '@' }}clinicaabertamente.com.br</p>
-          <p class="footer__text">
-            R. Belo Horizonte, 1558 - Centro, Londrina - PR, 86020-061
-          </p>
-          <p class="footer__text">Segunda à Sexta das 8:00 às 21:00</p>
+          <ul class="footer__list">
+            <li class="footer__list-item">(43) 3337-7793</li>
+            <li class="footer__list-item">
+              oi{{ '@' }}clinicaabertamente.com.br
+            </li>
+            <li class="footer__list-item">
+              R. Belo Horizonte, 1558 - Centro, Londrina - PR, 86020-061
+            </li>
+            <li class="footer__list-item">Segunda à Sexta das 8:00 às 21:00</li>
+          </ul>
         </div>
       </div>
     </div>
   </div>
-  <div class="footer__section footer__section--emphasis">
+  <div class="footer__section">
     <div class="footer__container">
       <div class="footer__bottom">
-        <p class="footer__legal">
+        <p class="footer__text">
           Copyright © 2024
-          <span class="footer__legal-emphasis">Clínica Abertamente</span>. Todos
+          <span class="footer__text--emphasis">Clínica Abertamente</span>. Todos
           os direitos reservados.
         </p>
-        <p class="footer__legal">
+        <p class="footer__text">
           Desenvolvido por
-          <a class="footer__legal-link" href="#" target="_blank">gCavalho.</a>
+          <a class="footer__link" href="#" target="_blank">gCavalho.</a>
         </p>
       </div>
     </div>

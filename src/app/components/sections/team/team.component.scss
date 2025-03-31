@@ -2,7 +2,7 @@
 @use 'abstracts/buttons' as buttons;
 
 .team {
-  background-color: #f4eee9;
+  background-color: #EFEAE6;
   &__container {
     padding-top: 100px;
     padding-bottom: 100px;
@@ -74,7 +74,12 @@
   &__button {
     @include buttons.button();
     &--primary {
-      @include buttons.button-variant(#ff8055, white, #d95e42, #c8523a);
+      @include buttons.button-variant(
+        $bg-color: #f58362,
+        $text-color: white,
+        $hover-bg: #ea7e5d,
+        $active-bg: #e37a5a,
+      );
     }
   }
   &__footer {

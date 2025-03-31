@@ -13,14 +13,29 @@
   justify-content: center;
   gap: 20px;
   align-items: start;
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+
+  &:not(.service--neutral, .service--emphasis):hover {
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px);
+  }
+
   &--emphasis {
     background-color: #076c68;
     transform: rotate(-5deg);
+    &:hover {
+      transform: rotate(-5deg) translateY(-10px);
+      box-shadow: 0 0 24px rgba(0, 0, 0, 0.25);
+    }
   }
+
   &--neutral {
     padding: 0;
     background-color: transparent;
   }
+
   &__title {
     font-weight: 600;
     font-size: 28px;
@@ -97,7 +112,12 @@
     font-weight: 500;
     &--neutral {
       @include buttons.button();
-      @include buttons.button-variant(#ff8055, white, #d95e42, #c8523a, 430);
+      @include buttons.button-variant(
+        $bg-color: #f58362,
+        $text-color: white,
+        $hover-bg: #ea7e5d,
+        $active-bg: #e37a5a
+      );
     }
 
     &--emphasis {

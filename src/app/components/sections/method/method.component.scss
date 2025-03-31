@@ -17,7 +17,6 @@
     color: #076c68;
     margin: 0;
     padding: 0;
-
   }
   &__description {
     font-size: 18px;
@@ -45,11 +44,13 @@
   }
   &__button {
     @include buttons.button();
-    &--primary {
-      @include buttons.button-variant(#ff8055, white, #d95e42, #c8523a);
-    }
-    &--secondary {
-      @include buttons.button-variant(white, #ff8055, #edd7d3ba, #e4c0bba3);
-    }
+
+    @include buttons.button-variant(
+      $bg-color: #f58362,
+      $text-color: white,
+      $hover-bg: #ea7e5d,
+      $active-bg: #e37a5a,
+      $font-weight: 500
+    );
   }
 }

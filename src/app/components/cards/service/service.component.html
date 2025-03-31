@@ -1,14 +1,19 @@
-<div
-  class="service"
-  [ngClass]="type !== 'default' ? 'service--' + type : ''"
->
-  <h2 class="service__title"
-      [ngClass]="type !== 'default' ? 'service__title--' + type : ''"
-  >{{ title }}</h2>
-  <p class="service__description"
-     [ngClass]="type !== 'default' ? 'service__description--' + type : ''"
-  >{{ description }}</p>
-  <a class="service__subtitle"
-      [ngClass]="type !== 'default' ? 'service__subtitle--' + type : ''"
-  >{{subtitle}}</a>
+<div class="service" [ngClass]="type !== 'default' ? 'service--' + type : ''">
+  <h2
+    class="service__title"
+    [ngClass]="type !== 'default' ? 'service__title--' + type : ''"
+  >
+    {{ title }}
+  </h2>
+  <p
+    class="service__description"
+    [ngClass]="type !== 'default' ? 'service__description--' + type : ''"
+  >
+    {{ description }}
+  </p>
+  <a
+    class="service__subtitle"
+    [ngClass]="type !== 'default' ? 'service__subtitle--' + type : ''"
+    >{{ subtitle }}
+  </a>
 </div>
