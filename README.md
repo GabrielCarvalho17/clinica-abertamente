@@ -1,8 +1,22 @@
-# ClinicaAbertamente
+# Clinica Abertamente
 
 Este projeto foi gerado com o [Angular CLI](https://github.com/angular/angular-cli), versão 19.0.6.
 
+## Requisitos de Ambiente
+
+Este projeto exige o uso de versões específicas do Node.js e do npm. A instalação das dependências será **bloqueada automaticamente** se as versões não forem compatíveis.
+
+- **Node.js**: `22.12.0`
+- **npm**: `11.1.0`
+
+A verificação é feita por meio de um script chamado `check-env.js`, executado antes da instalação de dependências. Esse script está configurado no `package.json` com o comando `preinstall`.
+
+Caso você esteja usando versões diferentes, utilize uma ferramenta como [`nvm`](https://github.com/coreybutler/nvm-windows) ou [`volta`](https://volta.sh/) para gerenciar as versões corretamente.
+
+---
+
 ## Servidor de desenvolvimento
+
 
 Para iniciar o servidor de desenvolvimento local, execute:
 

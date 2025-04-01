@@ -1,5 +1,5 @@
 <footer class="footer">
-  <div class="footer__section">
+  <div class="footer__section footer__section--emphasis">
     <div class="footer__container">
       <div class="footer__top">
         <h2 class="footer__title">Fique por dentro de novidades</h2>
@@ -12,7 +12,7 @@
             class="footer__fg-input"
             placeholder="Cadastre seu e-mail..."
           />
-          <button class="footer__fg-button">enviar</button>
+          <button class="footer__fg-button">Enviar</button>
         </div>
       </div>
     </div>
@@ -46,31 +46,6 @@
             <img src="images/payments/pix.svg" alt="" />
           </div>
         </div>
-        <app-accordion
-          *ngIf="isMobile"
-          [title]="'Navegação'"
-          [items]="[
-            'Início',
-            'Serviços',
-            'Espaço',
-            'Equipe',
-            'Metodologia',
-            'Localização',
-            'Nosso blog',
-          ]"
-        >
-        </app-accordion>
-        <app-accordion
-          *ngIf="isMobile"
-          [title]="'Contato'"
-          [items]="[
-            '(43) 3337-7793',
-            'oi@clinicaabertamente.com.br',
-            'R. Belo Horizonte, 1558 - Centro, Londrina - PR, 86020-061',
-            'Segunda à Sexta das 8:00 às 21:00',
-          ]"
-        >
-        </app-accordion>
         <div *ngIf="!isMobile" class="footer__column">
           <h2 class="footer__title">Navegação</h2>
           <ul class="footer__list">
@@ -110,6 +85,31 @@
             <li class="footer__list-item">Segunda à Sexta das 8:00 às 21:00</li>
           </ul>
         </div>
+        <app-accordion
+          *ngIf="isMobile"
+          [title]="'Navegação'"
+          [items]="[
+            'Início',
+            'Serviços',
+            'Espaço',
+            'Equipe',
+            'Metodologia',
+            'Localização',
+            'Nosso blog',
+          ]"
+        >
+        </app-accordion>
+        <app-accordion
+          *ngIf="isMobile"
+          [title]="'Contato'"
+          [items]="[
+            '(43) 3337-7793',
+            'oi@clinicaabertamente.com.br',
+            'R. Belo Horizonte, 1558 - Centro, Londrina - PR, 86020-061',
+            'Segunda à Sexta das 8:00 às 21:00',
+          ]"
+        >
+        </app-accordion>
       </div>
     </div>
   </div>
